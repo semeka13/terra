@@ -5,16 +5,16 @@ import pickle
 from ml.errors import NotFittedError
 
 
-class CatBoostRecomender:
+class CatBoostRecommender:
     def __init__(self, model=CatBoostClassifier()):
         self.model = model
 
-    def fit(self, X: np.ndarray, y: np.ndarray, path=None) -> None:
-        if path == None:
+    def fit(self, X: np.ndarray, y: np.ndarray, model_file=None, model_dir="None") -> None:
+        if model_file == None:
             self.model.fit(X, y)
         else:
-            if path in listdir("trained_models"):
-                self.model.fit(X, y, init_model=path)
+            if model_file in listdir(model_dir):
+                self.model.fit(X, y, init_model=model_file)
             else:
                 raise
 
