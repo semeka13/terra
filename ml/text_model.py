@@ -2,7 +2,9 @@ from transformers import BertTokenizerFast, TFBertModel
 from ml.utils import cos_similatiry
 import numpy as np
 from os import listdir, mkdir
+import warnings
 
+warnings.filterwarnings("ignore")
 """
 Как это использовать: 
     1) Нужно вызвать функцию DOWNLOAD_BERT она делает папки и скачивает модели тк запушить это на гит ненвозможно
