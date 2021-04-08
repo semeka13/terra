@@ -2,3 +2,5 @@ transformers
 numba
 numpy
 scikit-learn
+pickle
+catboost

@@ -1,4 +1,4 @@
-from ml.text_model import DOWNLOAD_BERT, TextModel
+from ml.text_processing.text_model import DOWNLOAD_BERT, TextModel
 
 DOWNLOAD_BERT()
 tm = TextModel()

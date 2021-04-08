@@ -1,6 +1,7 @@
 from sklearn.cluster import MiniBatchKMeans
 import numpy as np
 import pickle
+from ml.errors import NotFittedError
 
 
 class Clusterizer:
